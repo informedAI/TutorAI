@@ -1,22 +1,22 @@
-"use client";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-
 const Welcome = () => {
   return (
-    <main className="min-h-screen min-w-screen flex items-center justify-center flex-col gap-4 ">
+    <main className="min-h-full min-w-full flex items-center justify-center flex-col gap-4 text-center">
       {" "}
-      <p className=" text-4xl animate-pulse duration-2500 drop-shadow-sm font-bold">
-        TutorAI
+      <p className="text-5xl drop-shadow-sm font-londrinaShadow">
+        Studying is important, right?
       </p>{" "}
-      <p className="text-xl">
-        Create modern materials to enhance your learning process.
+      <p className="text-3xl font-londrinaSolid">
+        You know what else is important? Sleep.{" "}
       </p>
-      <Button variant="default" className="w-20 h-10">
-        <Link className="text-xl" href="/create">
-          Start
-        </Link>
-      </Button>
+      <p className="text-3xl font-londrinaSolid text-white">
+        We made app for you not to resign from any of those two.
+      </p>
+      <p className="text-3xl font-londrinaSolid">
+        Save time on creating materials instead of actuallty studying them.
+      </p>
+      <p className="text-3xl font-londrinaSolid text-white">
+        Made by students for students. ❤️
+      </p>
     </main>
   );
 };
