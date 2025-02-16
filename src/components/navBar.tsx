@@ -14,7 +14,7 @@ const NavButton = ({
     <Button
       className={`bg-background border border-black text-black font-londrinaShadow text-3xl h-10 w-36 rounded-xl ${
         pathname == children.toLowerCase().replace(" ", "")
-          ? "bg-[#A5B4FC]"
+          ? "bg-[#889cff]"
           : ""
       }`}
     >

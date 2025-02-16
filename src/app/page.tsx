@@ -9,10 +9,10 @@ const Welcome = () => {
         You know what else is important? Sleep.{" "}
       </p>
       <p className="text-3xl font-londrinaSolid text-white">
-        We made app for you not to resign from any of those two.
+        We made an app so you don&apos;t have to give up any of those two.
       </p>
       <p className="text-3xl font-londrinaSolid">
-        Save time on creating materials instead of actuallty studying them.
+        Save time on creating materials instead of actually studying them.
       </p>
       <p className="text-3xl font-londrinaSolid text-white">
         Made by students for students. ❤️
