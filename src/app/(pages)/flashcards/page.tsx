@@ -26,7 +26,7 @@ const Flashcards = () => {
   });
 
   return (
-    <div className=" grid grid-cols-1 xl:grid-cols-2 ">
+    <div className="grid grid-cols-1 xl:grid-cols-2 ">
       <div className=" h-full flex flex-col gap-5 pt-20 pb-8 xl:pt-32 xl:pb-32 px-12 sm:px-24 max-w-[36rem] mx-auto sm:min-w-[35rem]">
         <h1 className="text-[2.8rem] font-londrinaSolid font-light">
           Generate Flashcards!
@@ -92,7 +92,7 @@ const Flashcards = () => {
         </div>
       </div>
 
-      <div className="w-fit mr-auto ml-auto xl:mr-auto h-full font-thin pb-20 pt-6 xl:pt-32 xl:pb-32 px-12 sm:px-24 mt-14">
+      <div className="w-fit mr-auto ml-auto xl:mr-auto h-full font-thin pb-20 pt-20 xl:pt-48 xl:pb-32 px-12 sm:px-24">
         <p className="text-xl sm:text-3xl font-londrinaSolid">Instructions:</p>
         <ol className="list-decimal font-londrinaSolid font-thin text-xl sm:text-3xl ml-10">
           <li>

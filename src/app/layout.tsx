@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-full h-fit">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid lg:grid-cols-[auto,1fr] h-fit`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased grid lg:grid-cols-[auto,1fr] min-h-full h-fit`}
       >
         <Navbar />
-        <main className="">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -95,7 +95,7 @@ const Notes = () => {
         </div>
       </div>
 
-      <div className="w-fit mr-auto ml-auto xl:mr-auto h-full font-thin pb-20 pt-6 xl:pt-32 xl:pb-32 px-12 sm:px-24 mt-14">
+      <div className="w-fit mr-auto ml-auto xl:mr-auto h-full font-thin pb-20 pt-20 xl:pt-48 xl:pb-32 px-12 sm:px-24">
         <p className="text-xl sm:text-3xl font-londrinaSolid">Instructions:</p>
         <ol className="list-decimal font-londrinaSolid font-thin text-xl sm:text-3xl ml-10">
           <li>
