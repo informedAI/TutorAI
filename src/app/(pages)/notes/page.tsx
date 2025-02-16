@@ -17,13 +17,15 @@ import {
 } from "@/components/ui/select";
 
 const Notes = () => {
-  const [data, setDate] = useState({
+  const [data, setData] = useState({
     topic: "",
     description: "",
     materials: "",
     words: 400,
     format: "",
   });
+
+  console.log(data);
 
   return (
     <div className=" grid grid-cols-1 xl:grid-cols-2 ">
@@ -39,6 +41,7 @@ const Notes = () => {
               id="topic"
               placeholder="Circulatory system..."
               className="bg-[#eeeeee]"
+              onChange={(e) => setData({ ...data, topic: e.target.value })}
             />
           </div>
           <div>
@@ -47,6 +50,9 @@ const Notes = () => {
               placeholder="Value..."
               id="description"
               className="bg-[#eeeeee]"
+              onChange={(e) =>
+                setData({ ...data, description: e.target.value })
+              }
             />
           </div>
 
@@ -63,19 +69,21 @@ const Notes = () => {
               max={10000}
               step={10}
               id="cards"
-              onValueChange={(value) => setDate({ ...data, words: value[0] })}
+              onValueChange={(value) => setData({ ...data, words: value[0] })}
             />
           </div>
 
           <div>
             <Label htmlFor="format">Select format</Label>
-            <Select>
+            <Select
+              onValueChange={(value) => setData({ ...data, format: value })}
+            >
               <SelectTrigger className=" bg-[#eeeeee]" id="format">
                 <SelectValue placeholder="Select a format" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  s<SelectLabel>Formats</SelectLabel>
+                  <SelectLabel>Formats</SelectLabel>
                   <SelectItem value="Obsidian">Obsidian</SelectItem>
                   <SelectItem value="Goodnotes">Goodnotes</SelectItem>
                   <SelectItem value="pdf">PDF</SelectItem>

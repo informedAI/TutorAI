@@ -39,6 +39,7 @@ const Flashcards = () => {
               id="topic"
               placeholder="Circulatory system..."
               className="bg-[#eeeeee]"
+              onChange={(e) => setDate({ ...data, topic: e.target.value })}
             />
           </div>
           <div>
@@ -47,6 +48,9 @@ const Flashcards = () => {
               placeholder="Value..."
               id="description"
               className="bg-[#eeeeee]"
+              onChange={(e) =>
+                setDate({ ...data, description: e.target.value })
+              }
             />
           </div>
 
@@ -69,8 +73,10 @@ const Flashcards = () => {
 
           <div>
             <Label htmlFor="format">Select format</Label>
-            <Select>
-              <SelectTrigger className=" bg-[#eeeeee]" id="format">
+            <Select
+              onValueChange={(value) => setDate({ ...data, format: value })}
+            >
+              <SelectTrigger className="bg-[#eeeeee]" id="format">
                 <SelectValue placeholder="Select a format" />
               </SelectTrigger>
               <SelectContent>

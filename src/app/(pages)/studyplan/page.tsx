@@ -17,13 +17,18 @@ import {
 } from "@/components/ui/select";
 
 const StudyPlan = () => {
-  const [data, setDate] = useState({
+  const [data, setData] = useState({
     topic: "",
     description: "",
     materials: "",
-    words: 400,
+    date: new Date(),
     format: "",
   });
+  const setDate = (date: Date) => {
+    setData({ ...data, date });
+  };
+
+  console.log(data);
 
   return (
     <div className=" grid grid-cols-1 xl:grid-cols-2 ">
@@ -39,6 +44,7 @@ const StudyPlan = () => {
               id="topic"
               placeholder="Circulatory system..."
               className="bg-[#eeeeee]"
+              onChange={(e) => setData({ ...data, topic: e.target.value })}
             />
           </div>
           <div>
@@ -49,6 +55,9 @@ const StudyPlan = () => {
               placeholder="Value..."
               id="description"
               className="bg-[#eeeeee]"
+              onChange={(e) =>
+                setData({ ...data, description: e.target.value })
+              }
             />
           </div>
 
@@ -56,16 +65,23 @@ const StudyPlan = () => {
             <Label className="w-fit" htmlFor="materials">
               Attatch materials (optional)
             </Label>
-            <Input className="bg-[#eeeeee]" id="materials" type="file" />
+            <Input
+              className="bg-[#eeeeee]"
+              id="materials"
+              type="file"
+              onChange={(e) => setData({ ...data, materials: e.target.value })}
+            />
           </div>
           <div className="flex flex-col gap-1.5">
             <Label htmlFor="cards">Type exam date (deadline)</Label>
-            <DatePicker />
+            <DatePicker date={data["date"]} setDate={setDate} />
           </div>
 
           <div>
             <Label htmlFor="format">Select format</Label>
-            <Select>
+            <Select
+              onValueChange={(value) => setData({ ...data, format: value })}
+            >
               <SelectTrigger className="bg-[#eeeeee]" id="format">
                 <SelectValue placeholder="Select a format" />
               </SelectTrigger>
